@@ -1,15 +1,17 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radhe Radhe - Sunitha</title>
 <style>
-body{background:#ffc8dd; margin:0; min-height:100vh; display:flex; justify-content:center; align-items:center; font-family:Arial;}
-.card{background:white; width:90%; max-width:330px; border-radius:25px; padding:25px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.2);}
-h1{color:#e91e63; font-size:32px; margin:10px;}
-.btn{background:#e91e63; color:white; border:none; padding:14px; border-radius:25px; width:95%; font-size:18px; margin:8px 0; cursor:pointer;}
+body{background:linear-gradient(135deg,#ffc8dd,#ffafcc); margin:0; min-height:100vh; display:flex; justify-content:center; align-items:center; font-family:Arial;}
+.card{background:white; width:90%; max-width:340px; border-radius:30px; padding:25px; text-align:center; box-shadow:0 15px 35px rgba(0,0,0,0.2);}
+h1{color:#e91e63; font-size:34px; margin:10px 0;}
+h3{color:#555;}
+.btn{background:#e91e63; color:white; border:none; padding:15px; border-radius:30px; width:100%; font-size:18px; font-weight:bold; margin:8px 0; cursor:pointer;}
 .btn2{background:#ff4081;}
+#msg{color:#e91e63; font-weight:bold; min-height:20px; margin-top:15px;}
 </style>
 </head>
 <body>
@@ -19,16 +21,15 @@ h1{color:#e91e63; font-size:32px; margin:10px;}
 <h2 id="likeText">💖 106 Likes 💖</h2>
 <button class="btn" onclick="like()">💖 Like Cheyandi</button>
 <button class="btn btn2" onclick="playSong()">🎵 Play Bhajan</button>
-<p style="color:green;">🎵 Radhe Radhe Govinda... 🎶</p>
-<p id="msg" style="color:#e91e63; font-weight:bold;"></p>
-<p style="font-size:12px; color:gray;">Your Bhajan will play on YouTube 🙏</p>
+<p id="msg"></p>
+<p style="color:#e91e63; font-size:14px; margin-top:15px;">🎵 Radhe Radhe Govinda 🎶<br>Jai Shri Krishna 🙏</p>
 </div>
 <script>
 let c=106;
-function like(){c++; document.getElementById('likeText').innerText='💖 '+c+' Likes 💖'; document.getElementById('msg').innerText='Thank you Akka! 💖';}
+function like(){c++; document.getElementById('likeText').innerText='💖 '+c+' Likes 💖'; document.getElementById('msg').innerText='Thank you Akka! Jai Shri Krishna! 💖🙏';}
 function playSong(){
 document.getElementById('msg').innerText='🎶 Opening YouTube... 🙏';
-window.open('https://www.youtube.com/results?search_query=Radhe+Radhe+bhajan','_blank');
+window.open('https://www.youtube.com/watch?v=9mQJa1A2B7k','_blank');
 }
 </script>
 </body>
