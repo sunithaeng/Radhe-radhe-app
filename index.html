@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radhe Radhe - Sunitha</title>
 <style>
-body{font-family:sans-serif; text-align:center; background:#ffe6f0; padding:20px;}
-.card{background:white; padding:30px; border-radius:20px; max-width:400px; margin:auto;}
-h1{color:#e91e63;}
-button{background:#e91e63; color:white; border:none; padding:15px 30px; border-radius:30px; font-size:18px; margin:10px;}
-#likes{font-size:22px; font-weight:bold; margin:20px 0;}
+body{background:#ffc8dd; margin:0; min-height:100vh; display:flex; justify-content:center; align-items:center; font-family:Arial;}
+.card{background:white; width:90%; max-width:330px; border-radius:25px; padding:25px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+h1{color:#e91e63; font-size:32px; margin:5px;}
+.btn{background:#e91e63; color:white; border:none; padding:14px 20px; border-radius:25px; width:95%; font-size:18px; margin:8px 0;}
+#player{display:none; margin-top:15px; border-radius:15px; width:100%; height:215px;}
 </style>
 </head>
 <body>
 <div class="card">
 <h1>🦚 Radhe Radhe 🙏</h1>
-<h2>Sunitha 💖</h2>
-<div id="likes">💖 101 Likes 💖</div>
-<button onclick="like()">💖 Like Cheyandi</button>
-<button onclick="playBhajan()">🎵 Play Bhajan</button>
-<p id="msg" style="color:green; font-weight:bold;"></p>
+<h3>Sunitha 💖</h3>
+<h2 id="likeText">💖 106 Likes 💖</h2>
+<button class="btn" onclick="like()">💖 Like Cheyandi</button>
+<button class="btn" onclick="playSong()">🎵 Play Bhajan</button>
+<p style="color:green; margin-top:15px;">🎵 Radhe Radhe Govinda... 🎶</p>
+<iframe id="player" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<p id="msg" style="color:#e91e63; font-weight:bold;"></p>
 </div>
 <script>
-let count=101;
-function like(){count++; document.getElementById('likes').innerText='💖 '+count+' Likes 💖'; document.getElementById('msg').innerText='Radhe Radhe Akka! Thank You! 🙏';}
-function playBhajan(){document.getElementById('msg').innerText='🎵 Radhe Radhe Govinda... 🎶';}
+let c=106;
+function like(){c++; document.getElementById('likeText').innerText='💖 '+c+' Likes 💖';}
+function playSong(){
+let p=document.getElementById('player');
+p.style.display='block';
+p.src='https://www.youtube.com/embed/yoZ1Y3Mf0lw?autoplay=1';
+document.getElementById('msg').innerText='🎶 Playing... Radhe Radhe 🙏';
+}
 </script>
 </body>
 </html>
