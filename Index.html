@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radhe Radhe</title>
+<style>
+body{background:#ffd6e7; display:flex; justify-content:center; align-items:center; min-height:100vh; margin:0; font-family:sans-serif;}
+.card{background:white; border-radius:30px; padding:30px; text-align:center; width:85%; max-width:320px;}
+h1{color:#e91e63; font-size:36px; margin:0;}
+.btn{background:#e91e63; color:white; border:none; padding:15px 30px; border-radius:30px; font-size:18px; margin:10px; width:90%;}
+iframe{margin-top:15px; border-radius:15px; display:none; width:100%; height:200px;}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>🦚 Radhe Radhe 🙏</h1>
+<h2>Sunitha 💖</h2>
+<h2 id="likes">💖 106 Likes 💖</h2>
+<button class="btn" onclick="like()">💖 Like Cheyandi</button>
+<button class="btn" onclick="play()">🎵 Play Bhajan</button>
+<div style="color:green; margin-top:15px;">🎵 Radhe Radhe Govinda... 🎶</div>
+<iframe id="player" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<p id="msg"></p>
+</div>
+<script>
+let count=106;
+function like(){count++; document.getElementById('likes').innerHTML='💖 '+count+' Likes 💖';}
+function play(){
+let p=document.getElementById('player');
+p.style.display='block';
+p.src='https://www.youtube.com/embed/v2a4vY5zP0M?autoplay=1';
+document.getElementById('msg').innerHTML='🎶 Playing Radhe Bhajan 🙏';
+}
+</script>
+</body>
+</html>
