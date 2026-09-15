@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radhe Radhe - Sunitha</title>
+<style>
+body{font-family:sans-serif; text-align:center; background:#ffe6f0; padding:20px;}
+.card{background:white; padding:30px; border-radius:20px; max-width:400px; margin:auto;}
+h1{color:#e91e63;}
+button{background:#e91e63; color:white; border:none; padding:15px 30px; border-radius:30px; font-size:18px; margin:10px;}
+#likes{font-size:22px; font-weight:bold; margin:20px 0;}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>🦚 Radhe Radhe 🙏</h1>
+<h2>Sunitha 💖</h2>
+<div id="likes">💖 101 Likes 💖</div>
+<button onclick="like()">💖 Like Cheyandi</button>
+<button onclick="playBhajan()">🎵 Play Bhajan</button>
+<p id="msg" style="color:green; font-weight:bold;"></p>
+</div>
+<script>
+let count=101;
+function like(){count++; document.getElementById('likes').innerText='💖 '+count+' Likes 💖'; document.getElementById('msg').innerText='Radhe Radhe Akka! Thank You! 🙏';}
+function playBhajan(){document.getElementById('msg').innerText='🎵 Radhe Radhe Govinda... 🎶';}
+</script>
+</body>
+</html>
